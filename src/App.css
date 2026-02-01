@@ -1,0 +1,13 @@
+:root {
+  --nav-height: 64px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: var(--nav-height);
+  box-sizing: border-box;
+}
