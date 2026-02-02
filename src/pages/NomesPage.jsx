@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 import Navbar from "../components/Navbar"
+import { IoClose } from "react-icons/io5";
 
 export default function NomesPage() {
   const [nome, setNome] = useState("")
@@ -12,6 +13,10 @@ export default function NomesPage() {
 
     setNomes([...nomes, nome])
     setNome("")
+  }
+
+  function removerNome(index) {
+    setNomes(nomes.filter((_, i) => i !== index))
   }
 
   const sortear = () => {
@@ -55,7 +60,12 @@ export default function NomesPage() {
         <h1 className="text-2xl mb-2">Nomes adicionados:</h1>
         <ul className="flex flex-wrap gap-5">
           {nomes.map((item, index) => (
-            <li className="bg-gray-200 px-3 py-1 rounded min-w-20" key={index}>{item}</li>
+            <li className="bg-gray-200 px-3 py-1 rounded min-w-20 flex items-center justify-between" key={index}>
+              {item}
+              <button onClick={() => removerNome(index)} className="ml-2 text-red-500 cursor-pointer">
+                <IoClose />
+              </button>
+            </li>
           ))}
         </ul>
       </div>
