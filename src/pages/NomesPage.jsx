@@ -53,7 +53,7 @@ export default function NomesPage() {
         />
         <button
           onClick={adicionarNome}
-          className="bg-blue-300 text-black text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out hover:bg-white">Adicionar
+          className="bg-purple-500 text-white text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out hover:bg-purple-400">Adicionar
         </button>
       </div>
 

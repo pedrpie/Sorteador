@@ -13,10 +13,10 @@ export default function Home() {
             <div className='flex justify-center gap-5 mt-5'>
                 <Link 
                     to="/nomes" 
-                    className='bg-blue-300 text-black text-2xl p-2 rounded-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-white'>Nomes</Link>
+                    className='bg-purple-500 text-white text-2xl p-2 rounded-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400'>Nomes</Link>
                 <Link 
                     to="/numeros" 
-                    className='bg-blue-300 text-black text-2xl p-2 rounded-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-white'>Números</Link>
+                    className='bg-purple-500 text-white text-2xl p-2 rounded-sm transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-purple-400'>Números</Link>
             </div>
         </div>
     </div>

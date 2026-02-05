@@ -23,7 +23,7 @@ export default function NomesModal({ nomeSorteado, onClick, nomes }) {
           if (typeof onClick === "function") onClick();
           setOpen(true);
         }}
-        className="bg-blue-300 text-black text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out mt-5 hover:bg-white"
+        className="bg-purple-500 text-white text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out mt-5 hover:bg-purple-400"
       >
         Sortear
       </button>
