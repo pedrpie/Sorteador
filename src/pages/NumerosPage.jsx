@@ -29,8 +29,8 @@ export default function NumerosPage() {
     <div>
       <Navbar />
 
-      <h1 className="text-7xl text-[#b4b4dd]">Sortear Números</h1>
-      <h2 className='text-3xl text-white mt-3'>Selecione os números abaixo</h2>
+      <h1 id="TitleNumeros" className="text-7xl text-[#b4b4dd]">Sortear Números</h1>
+      <h2 id="DescriptionNumeros" className='text-3xl text-white mt-3'>Selecione os números abaixo</h2>
 
       <div className="flex gap-5 justify-center mt-5">
         <input

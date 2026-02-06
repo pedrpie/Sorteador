@@ -7,9 +7,9 @@ export default function Home() {
     <div>
         <Navbar />
 
-        <h1 className='text-8xl text-[#b4b4dd] text-shadow-lg'>Sorteador</h1>
+        <h1 id='TitleSorteador' className='text-8xl text-[#b4b4dd] text-shadow-lg'>Sorteador</h1>
         <div>
-            <h1 className='text-3xl text-white mt-3'>O que você deseja sortear?</h1>
+            <h1 id='DescriptionSorteador' className='text-3xl text-white mt-3'>O que você deseja sortear?</h1>
             <div className='flex justify-center gap-5 mt-5'>
                 <Link 
                     to="/nomes" 

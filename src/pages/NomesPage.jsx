@@ -32,14 +32,19 @@ export default function NomesPage() {
   }
 
   return (
-    <div>
+    <div className="px-4">
       <Navbar />
 
-      <h1 className="text-7xl text-[#b4b4dd]">Sortear Nomes</h1>
-      <h1 className="text-3xl text-white mt-3">Adicione os nomes no campo abaixo</h1>
+      <h1 id="TitleNomes" className="text-7xl text-[#b4b4dd]">
+        Sortear Nomes
+      </h1>
+      <h1 id="DescriptionNome" className="text-3xl text-white mt-3">
+        Adicione os nomes no campo abaixo
+      </h1>
 
       <div className="flex gap-5 mt-5">
-        <input 
+        <input
+          id="input"
           type="text"
           value={nome}
           onChange={(e) => setNome(e.target.value)}
@@ -49,21 +54,32 @@ export default function NomesPage() {
             }
           }}
           placeholder="digite aqui"
-          className="bg-gray-900 text-white text-2xl w-100 p-2 border border-white rounded-sm"
+          className="bg-gray-900 text-white text-2xl w-full p-2 border border-white rounded-sm"
         />
         <button
           onClick={adicionarNome}
-          className="bg-purple-500 text-white text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out hover:bg-purple-400">Adicionar
+          className="bg-purple-500 text-white text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out hover:bg-purple-400"
+        >
+          Adicionar
         </button>
       </div>
 
-      <div className="bg-amber-50 mt-5 p-2 rounded-sm w-134">
+      <div
+        id="containerNomesAdicionados"
+        className="bg-amber-50 mt-5 p-2 rounded-sm w-full"
+      >
         <h1 className="text-2xl mb-2">Nomes adicionados:</h1>
         <ul className="flex flex-wrap gap-5">
           {nomes.map((item, index) => (
-            <li className="bg-gray-200 px-3 py-1 rounded min-w-20 flex items-center justify-between" key={index}>
+            <li
+              className="bg-gray-200 px-3 py-1 rounded min-w-20 flex items-center justify-between"
+              key={index}
+            >
               {item}
-              <button onClick={() => removerNome(index)} className="ml-2 text-red-500 cursor-pointer">
+              <button
+                onClick={() => removerNome(index)}
+                className="ml-2 text-red-500 cursor-pointer"
+              >
                 <IoClose />
               </button>
             </li>
