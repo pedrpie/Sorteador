@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { motion } from "framer-motion"
 import Navbar from "../components/Navbar"
 
 export default function NumerosPage() {
@@ -29,36 +29,43 @@ export default function NumerosPage() {
     <div>
       <Navbar />
 
-      <h1 id="TitleNumeros" className="text-7xl text-[#b4b4dd]">Sortear Números</h1>
-      <h2 id="DescriptionNumeros" className='text-3xl text-white mt-3'>Selecione os números abaixo</h2>
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.4 }}
+        className="p-6 shadow-xl rounded-2xl">
 
-      <div className="flex gap-5 justify-center mt-5">
-        <input
-          type="number"
-          placeholder="Início"
-          value={inicio}
-          onChange={(e) => setInicio(e.target.value)}
-          className="bg-gray-900 text-white text-2xl border border-white rounded-sm w-30 p-2"
-        />
+        <h1 id="TitleNumeros" className="text-7xl text-[#b4b4dd]">Sortear Números</h1>
+        <h2 id="DescriptionNumeros" className='text-3xl text-white mt-3'>Selecione os números abaixo</h2>
 
-        <input
-          type="number"
-          placeholder="Fim"
-          value={fim}
-          onChange={(e) => setFim(e.target.value)}
-          className="bg-gray-900 text-white text-2xl border border-white rounded-sm w-30 p-2"
-        />
-      </div>
+        <div className="flex gap-5 justify-center mt-5">
+          <input
+            type="number"
+            placeholder="Início"
+            value={inicio}
+            onChange={(e) => setInicio(e.target.value)}
+            className="bg-gray-900 text-white text-2xl border border-white rounded-sm w-30 p-2"
+          />
 
-      <button 
-        onClick={sortear}
-        className="bg-purple-500 text-white text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out mt-5 hover:bg-purple-400"
-        >Sortear
-      </button>
+          <input
+            type="number"
+            placeholder="Fim"
+            value={fim}
+            onChange={(e) => setFim(e.target.value)}
+            className="bg-gray-900 text-white text-2xl border border-white rounded-sm w-30 p-2"
+          />
+        </div>
 
-      <div className="mt-5">
-        <p className="text-5xl text-white">{numeros}</p>
-      </div>
+        <button 
+          onClick={sortear}
+          className="bg-purple-500 text-white text-2xl p-2 cursor-pointer rounded-sm transition duration-300 ease-in-out mt-5 hover:bg-purple-400"
+          >Sortear
+        </button>
+
+        <div className="mt-5">
+          <p className="text-5xl text-white">{numeros}</p>
+        </div>
+      </motion.div>
     </div>
   )
 }
